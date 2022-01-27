@@ -1,7 +1,7 @@
 let song1 ;
 
 function preLoad()  {
-  song1 = loadSound("assets/happyrock.mp3");
+  song1 = loadSound("assets/uke.mp3");
 }
 
 function setup() {
