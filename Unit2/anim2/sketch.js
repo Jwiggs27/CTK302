@@ -1,4 +1,3 @@
-// Reed Cavi's Rain Man
 let x=0 ;
 function setup() {
   createCanvas(800, 800);
@@ -18,32 +17,32 @@ function draw() {
 
 
   function avatar(){
-    // rain man body head when not pressed
-  fill('black')
-  ellipse(410, 170, 80, 80);
+    background('black');
 
-  fill('white');
-  arc(410, 180, 40, 40, 0, PI + QUARTER_PI, CHORD);
+    fill('white');
+    quad(310, 185, 365, 185, 372, 246, 303, 246);
 
-  // rain man body
-  fill('black');
-  rect(390, 200, 40, 140);
-  rect(395, 230, 10, 140);
-  rect(413, 230, 10, 140);
+    fill('white');
+    quad(312, 246, 364, 246, 358, 314, 319, 314);
 
-  // rain man arms
-  fill('black');
-  line(500, 200, 400, 225);
-  fill('black');
-  line(300, 200, 400, 225);
+    fill(243, 228, 189);
+    quad(326, 174, 350, 174, 353, 185, 323, 185);
 
-  fill('white')
-  ellipse(395, 150, 10, 10);
+    fill(243, 228, 189);
+    ellipse(339, 127, 100, 100);
 
-  fill('white')
-  ellipse(425, 150, 10, 10);
+    fill('white');
+    arc(339, 121, 100, 100, 110, 0);
+
+    fill('white');
+    ellipse(350, 134, 10, 10);
+    ellipse(320, 134, 10, 10);
+
+    fill('white');
+    ellipse(348, 315, 25, 15);
+    ellipse(323, 314, 25, 15);
+
+    fill('white');
+    ellipse(312, 119, 100, 10);
   }
-
-
-
 }
