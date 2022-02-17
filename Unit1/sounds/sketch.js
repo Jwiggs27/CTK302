@@ -18,6 +18,7 @@ function mouseReleased() {
     song1.pause() ;
   } else {
     song1.loop();
+  }
 
 }
 
