@@ -2,11 +2,11 @@ let song1 ;
 
 function preLoad()  {
   song1 = loadSound("assets/uke.mp3");
+  song1.loop();
 }
 
 function setup() {
   createCanvas(500, 500);
-  song1.loop() ;
 }
 
 function draw() {
@@ -26,4 +26,3 @@ function mouseReleased() {
 function touchStarted() {
   getAudioContext().resume();
   }
-}
