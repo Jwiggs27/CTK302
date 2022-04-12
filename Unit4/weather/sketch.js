@@ -7,10 +7,12 @@ let x = 0;
 let windspeed = 0;
 let temperature = 0;
 let humidity = 0;
+let phoenix;
 let description = '';
 
 function setup() {
   createCanvas(400, 400);
+  phoenix = loadImage("assets/Phoenix.jpg");
 
   // HERE is the call to get the weather. We build the string first.
 
@@ -51,7 +53,7 @@ function draw() {
       break;
 
     case 1:
-      background(200);
+      background("tan");
       fill("black");
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("windspeed is " + windspeed, 20, 40);
@@ -66,10 +68,19 @@ function draw() {
 
 
 
+
       // cloud
-      fill("white");
+      fill("orange");
       noStroke();
-      ellipse(x, 300, 200, 100);
+      ellipse(x, 40, 60, 60);
+      line(x, -60, 0, -40);
+      line(x, 40, 0, 60);
+      line(x, -45, -30, -30);
+      line(x, -45, 30, -30);
+      line(x, 0, -40, 0);
+      line(x, 0, 60, 0);
+      line(x, 45, -30, 30);
+      line(x, 45, 30, 30);
 
       // move the cloud's x position
       x = x + windspeed / 3;
@@ -77,4 +88,5 @@ function draw() {
 
       break;
   }
+
 }
