@@ -1,5 +1,6 @@
 var bubbles = [];
 let url = "";
+let font;
 
 function setup() {
   //let key = "1xG5lzBtJV3gK61ZE_qdku3ms9-pCJqwl0T8RVHI11m0"; // this is KEY of the URL from the sheet
@@ -8,6 +9,7 @@ function setup() {
   url = "https://opensheet.vercel.app/" + key + "/Form+Responses+1"; // here I'm making the string for loadJSON.
 
   loadJSON(url, gotData);
+  font = loadFont("assets/Righteous.ttf");
 
   // Regular setup code we usually have
   createCanvas(windowWidth, windowHeight);
@@ -33,7 +35,7 @@ function gotData(data) {
 }
 
 function draw() {
-  background("blue");
+  background("black");
 
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
@@ -50,14 +52,15 @@ class Bubble {
     this.name = name;
 
     this.pos = createVector(random(width), random(height));
-    this.vel = createVector(random(2, 5), 0);
+    this.vel = createVector(random(4, 5), 0);
   }
 
   display() {
-    stroke("red");
+    textFont(font);
+    fill("white");
+    stroke("green");
     noFill();
     ellipse(this.pos.x, this.pos.y+10, 120, 120);
-    fill("white");
     text(
       this.name + "\n" + this.movie + "\n" + this.sport,
       this.pos.x,
