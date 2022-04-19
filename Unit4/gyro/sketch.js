@@ -22,7 +22,7 @@ function setup() {
 
 function draw() {
 
-  background('white'); // light blue
+  background('black'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
