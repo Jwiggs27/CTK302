@@ -57,14 +57,14 @@ function draw() {
 //   text("y = " + y.toFixed(2), 25, 170);
 //   text("z = " + z.toFixed(4), 25, 190);
 //
-//   // Text that makes CTK type in the background
-//   fill('white');
-//   noStroke();
-//   textSize(300);
-//   textAlign(CENTER);
-//   text("ctk", width / 2, height / 2);
-//
-// }
+  // Text that makes CTK type in the background
+  fill('white');
+  noStroke();
+  textSize(300);
+  textAlign(CENTER);
+  text("ctk", width / 2, height / 2);
+
+}
 
 
 
