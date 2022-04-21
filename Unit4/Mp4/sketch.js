@@ -44,7 +44,7 @@ function setup() {
 
 function draw() {
 
-  background('#c6f5ff'); // light blue
+  background('white'); // light blue
   image(jungle, width/2, height/2, width, height);
 
   // the map command !!!!
